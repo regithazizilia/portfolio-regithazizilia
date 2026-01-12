@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* di file CSS Tailwind */
+.gradient-text {
+  @apply bg-gradient-to-tr from-[#FF597B] via-[#FF8E9E] to-[#EEEEEE] bg-clip-text text-transparent;
+}
