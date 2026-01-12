@@ -5,11 +5,11 @@ import intern2 from "./assets/images/intern2.jpg";
 import intern3 from "./assets/images/intern3.jpg";
 import intern4 from "./assets/images/intern4.jpg";
 
-import org from "./assets/images/org.JPG";
+import org from "./assets/images/org.jpg";
 import org2 from "./assets/images/org2.jpg";
-import org3 from "./assets/images/org3.JPG";
-import org4 from "./assets/images/org4.JPG";
-import org5 from "./assets/images/org5.JPG";
+import org3 from "./assets/images/org3.jpg";
+import org4 from "./assets/images/org4.jpg";
+import org5 from "./assets/images/org5.jpg";
 
 import lab from "./assets/images/lab1.jpg";
 import lab2 from "./assets/images/lab2.jpg";
