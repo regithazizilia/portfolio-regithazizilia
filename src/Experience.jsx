@@ -7,7 +7,6 @@ import intern4 from "./assets/images/intern4.jpg";
 
 import org from "./assets/images/org.jpg";
 import org2 from "./assets/images/org2.jpg";
-import org3 from "./assets/images/org3.jpg";
 import org4 from "./assets/images/org4.jpg";
 import org5 from "./assets/images/org5.jpg";
 
@@ -130,7 +129,7 @@ function Internship() {
 }
 
 function Organization() {
-    const photoOrg = [org, org2, org3, org4, org5];
+    const photoOrg = [org, org2, org4, org5];
     return (
         <ExperienceCard
             title="Badan Semi Otonom (BSO) Alelopati"
