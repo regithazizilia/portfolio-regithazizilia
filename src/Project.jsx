@@ -11,6 +11,9 @@ import makanan from './assets/thumbnails/mn1.png'
 import obat from './assets/thumbnails/obat2.png'
 import ow from './assets/thumbnails/ow1.jpg'
 import sadmin from './assets/thumbnails/sa1.png'
+import srs from './assets/thumbnails/srs.png'
+import pl9 from './assets/thumbnails/pl9.png'
+import doc from './assets/thumbnails/doc.jpg'
 
 import bcupcake2 from './assets/modal/bc2.png'
 import bcupcake3 from './assets/modal/bc3.png'
@@ -98,6 +101,35 @@ import s14 from './assets/modal/sa14.png'
 import s15 from './assets/modal/sa15.png'
 import s16 from './assets/modal/sa16.png'
 
+import srs1 from './assets/modal/srs1.png'
+import srs2 from './assets/modal/srs2.png'
+import srs3 from './assets/modal/srs3.png'
+import sdd from './assets/modal/sdd.png'
+import sdd1 from './assets/modal/sdd1.png'
+import sdd2 from './assets/modal/sdd2.png'
+import sdd3 from './assets/modal/sdd3.png'
+import sdd4 from './assets/modal/sdd4.png'
+import sdd5 from './assets/modal/sdd5.png'
+
+import pl from './assets/modal/pl.png'
+import pl1 from './assets/modal/pl1.png'
+import pl2 from './assets/modal/pl2.png'
+import pl3 from './assets/modal/pl3.png'
+import pl4 from './assets/modal/pl4.png'
+import pl5 from './assets/modal/pl5.png'
+import pl6 from './assets/modal/pl6.png'
+import pl7 from './assets/modal/pl7.png'
+import pl8 from './assets/modal/pl8.png'
+import pl10 from './assets/modal/pl10.png'
+
+import doc1 from './assets/modal/doc1(1).png'
+import doc2 from './assets/modal/doc2.png'
+import doc3 from './assets/modal/doc3.png'
+import doc4 from './assets/modal/doc4.jpg'
+import doc5 from './assets/modal/doc5.png'
+import doc6 from './assets/modal/doc6.png'
+import doc7 from './assets/modal/doc7.png'
+import doc8 from './assets/modal/doc8.png'
 
 export default function Projects() {
     const { ref, inView } = useInView({ threshold: 0.2 })
@@ -170,6 +202,21 @@ export default function Projects() {
         s9, s10, s11, s12, s13, s14, s15, s16,
     ]
 
+    const admindocImages = [
+        srs, srs1, srs2, srs3, sdd, sdd1, sdd2,
+        sdd3, sdd4, sdd5
+    ]
+
+    const ppdbImages = [
+        pl, pl1, pl2, pl3, pl4, pl5, pl6,pl7, pl8,
+        pl9,
+    ] 
+
+    const docImages = [
+        doc, doc1, doc2, doc3, doc4, doc5, doc6, 
+        doc7, doc8
+    ]
+
     // ===== DATA STATIS =====
     const projects = [
         {
@@ -177,7 +224,7 @@ export default function Projects() {
             name: 'Sistem LKH dan Penilaian Kinerja',
             category: 'Web Development',
             desc: `LEMBAR KERJA HARIAN DAN MANAJEMEN PENILAIAN ANGKA KREDIT PEGAWAI NON-ASN BAPPEDA PROVINSI JAWA BARAT`,
-            tech: 'Vue.js, Tailwind, Laravel, MySQL',
+            tech: 'Vue.js, Tailwind, Laravel, MySQL, Laragon',
             thumbnail: kp,
             github_url: 'https://github.com/regithazizilia/simapak2',
             image_path: kpImages,
@@ -250,7 +297,7 @@ export default function Projects() {
             github_url: 'https://github.com/regithazizilia/OtherWorldGame.git',
             image_path: owImages,
         },
-        {
+                {
             id: 9,
             name: 'Sistem Administrasi Tugas Akhir',
             category: 'Desktop Development',
@@ -260,8 +307,37 @@ export default function Projects() {
             github_url: 'https://github.com/regithazizilia/TubesIMPL.git',
             image_path: sadminImages,
         },
-        {
+         {
             id: 10,
+            name: 'Sistem Administrasi Tugas Akhir (Document)',
+            category: 'System Design',
+            desc: `Creating Software Requierements Specification (SRS) and Software Design Document (SDD) technical documents`,
+            tech: 'Visual Paradigrm, Figma',
+            thumbnail: srs,
+            image_path: admindocImages,
+        },
+
+ 
+        {
+            id: 11,
+            name: 'Software Testing PPDB Application For Parongpong State High School 1',
+            category: 'Document Testing',
+            desc: `Performing software testing such as unit, integration, blackbox, whitebox, etc. Creating testing documents`,
+            tech: 'MySQL, PHP',
+            thumbnail: pl9,
+            image_path: ppdbImages,
+        },
+                {
+            id: 12,
+            name: 'Report Document Sistem LKH dan Penilaian Kinerja',
+            category: 'Report Document',
+            desc: `Report on the analysis, design, and implementation of Daily Work Report and Employee Performance Evaluation System`,
+            tech: 'Visual Paradigm, Figma',
+            thumbnail: doc,
+            image_path: docImages,
+        },
+               {
+            id: 13,
             name: 'Beauty Health',
             category: 'Desktop Development',
             desc: `An application that provides information about various types of skin problems and recommendations for skincare products that are equipped with product price calculations.`,
@@ -270,7 +346,6 @@ export default function Projects() {
             github_url: 'https://github.com/regithazizilia/BeautyHealth.git',
             image_path: beautyHealthImages,
         },
-
     ]
 
     return (
