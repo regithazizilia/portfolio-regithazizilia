@@ -8,15 +8,21 @@ import certified4 from './assets/images/cer4.png'
 import certified5 from './assets/images/cer5.png'
 import certified6 from './assets/images/cer6.png'
 import certified7 from './assets/images/cer7.png'
+import certified8 from './assets/images/cer8.png'
 
 const certificateImages = [
-  certified1,
-  certified2,
-  certified3,
+    certified8,
+      certified3,
   certified4,
+    certified2,
+
+
+
   certified5,
   certified6,
   certified7,
+    certified1,
+
 ]
 
 export default function Certification() {
