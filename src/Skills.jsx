@@ -92,7 +92,7 @@ export default function Skills() {
 
     const SkillCategoryCard = ({ title, skills, isSlider = false }) => {
         const [index, setIndex] = useState(0)
-        const itemsPerView = 5
+        const itemsPerView = isSlider ? 4 : 5
 
         const maxIndex = Math.max(skills.length - itemsPerView, 0)
 
@@ -109,14 +109,14 @@ export default function Skills() {
                             <button
                                 onClick={prev}
                                 disabled={index === 0}
-                                className="p-1 rounded bg-rose-300 disabled:opacity-40"
+                                className="p-1 rounded bg-rose-300 disabled:opacity-40 disabled:cursor-not-allowed enabled:hover:bg-rose-400 enabled:active:scale-95 transition-all"
                             >
                                 <ChevronLeft size={18} />
                             </button>
                             <button
                                 onClick={next}
                                 disabled={index === maxIndex}
-                                className="p-1 rounded bg-rose-300 disabled:opacity-40"
+                                className="p-1 rounded bg-rose-300 disabled:opacity-40 disabled:cursor-not-allowed enabled:hover:bg-rose-400 enabled:active:scale-95 transition-all"
                             >
                                 <ChevronRight size={18} />
                             </button>
@@ -133,14 +133,14 @@ export default function Skills() {
                         {skills.map((skill) => (
                             <div
                                 key={skill.name}
-                                className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 flex flex-col items-center justify-center gap-1 bg-grid2 rounded-lg"
+                                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex-shrink-0 flex flex-col items-center justify-center gap-1 bg-grid2 rounded-lg"
                             >
                                 <img
                                     src={skill.img}
                                     alt={skill.name}
-                                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                                    className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 object-contain"
                                 />
-                                <span className="text-[11px] text-center font-medium">
+                                <span className="text-[9px] sm:text-[10px] lg:text-[11px] text-center font-medium">
                                     {skill.name}
                                 </span>
                             </div>
@@ -171,14 +171,14 @@ export default function Skills() {
         <section
             id="skills"
             ref={ref}
-            className="flex flex-col items-center px-10 py-24 bg-main text-white"
+            className="flex flex-col items-center px-6 sm:px-10 lg:px-40 py-12 sm:py-24 bg-main text-white"
         >
             <div
                 className={`w-full transition-all duration-1000 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                     }`}
             >
-                <h1 className="text-5xl font-bold text-center mb-12 gradient-text">SKILLS</h1>
-                <h2 className=" text-md font-semibold mb-12 text-center"> I have a range of technical and non-technical skills that allow me to contribute effectively to accomplishing tasks and achieving organizational goals. </h2>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-12 gradient-text">SKILLS</h1>
+                <h2 className="text-xs sm:text-sm lg:text-base font-semibold mb-8 sm:mb-12 text-center">I have a range of technical and non-technical skills that allow me to contribute effectively to accomplishing tasks and achieving organizational goals.</h2>
 
                 {/* SOFT SKILLS */}
                 <div className="flex ">
@@ -229,7 +229,7 @@ export default function Skills() {
                             <SkillCategoryCard
                                 title="Development Tools"
                                 skills={skillCategories.tools}
-                                
+                                isSlider
                             />
 
 
@@ -272,8 +272,6 @@ export default function Skills() {
 
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </section>

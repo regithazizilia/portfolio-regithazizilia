@@ -358,7 +358,7 @@ export default function Projects() {
                 className={`transition-all duration-1000 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                     }`}
             >
-                <h2 className="text-4xl font-bold text-center mb-12 gradient-text">
+                <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 gradient-text">
                     PROJECTS
                 </h2>
 

@@ -60,7 +60,7 @@ export default function Contact() {
         <section
             id="contact"
             ref={ref}
-            className="px-6 sm:px-20 lg:px-40 py-48 bg-main text-white"
+            className="px-6 sm:px-20 lg:px-40 py-24 sm:py-36 lg:py-48 bg-main text-white"
         >
             <div
                 className={`w-full transition-all duration-1000 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -70,15 +70,14 @@ export default function Contact() {
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
                     
                     {/* Left Side - Text */}
-                    <div className="lg:w-1/2">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-3 gradient-text">
+                    <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 gradient-text">
                             Let's Work
                         </h2>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 gradient-text">
                             Together. Get in Touch
                         </h2>
-
-                        <p className="text-lg text-gray-300 mb-8 max-w-lg">
+                        <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 sm:mb-8 max-w-lg">
                             Feel free to reach out if you'd like to collaborate, discuss opportunities, or have any questions.
                         </p>
 
@@ -100,19 +99,19 @@ export default function Contact() {
                     </div>
 
                     {/* Right Side - Social Icons */}
-                    <div className="lg:w-1/2">
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="w-full lg:w-1/2">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-3 sm:gap-4">
                             {socialLinks.map((item, index) => (
                                 <a
                                     key={index}
                                     href={item.url || '#'}
                                     target={item.url ? "_blank" : "_self"}
                                     rel="noopener noreferrer"
-                                    className={`group flex flex-col items-center p-6 rounded-2xl transition-all duration-300 
+                                    className={`group flex flex-col items-center p-4 sm:p-6 rounded-2xl transition-all duration-300 
                                               ${item.bgColor} ${item.color} hover:scale-105 hover:shadow-xl`}
                                 >
                                     {/* Icon Circle */}
-                                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4
+                                    <div className={`w-12 sm:w-16 h-12 sm:h-16 rounded-full flex items-center justify-center mb-2 sm:mb-4
                                                    ${item.bgColor} group-hover:bg-white/20 transition-colors`}>
                                         <div className="text-white group-hover:scale-110 transition-transform">
                                             {item.icon}
@@ -120,9 +119,9 @@ export default function Contact() {
                                     </div>
                                     
                                     {/* Text */}
-                                    <span className="font-medium text-sm text-center">{item.name}</span>
+                                    <span className="font-medium text-xs sm:text-sm text-center">{item.name}</span>
                                     {item.text && (
-                                        <span className="text-xs text-gray-400 mt-1 text-center">{item.text}</span>
+                                        <span className="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1 text-center">{item.text}</span>
                                     )}
                                 </a>
                             ))}

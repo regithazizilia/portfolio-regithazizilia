@@ -53,7 +53,7 @@ export default function Experience() {
                 </div>
 
                 {/* Tabs */}
-                <div className="flex justify-center gap-10 mb-12">
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-10 mb-8 sm:mb-12">
                     <TabButton
                         label="Internship"
                         active={activeTab === 'internship'}
@@ -89,9 +89,6 @@ export default function Experience() {
     )
 }
 
-
-/* ================= TAB BUTTON ================= */
-
 function TabButton({ label, active, onClick }) {
     return (
         <button
@@ -118,7 +115,6 @@ function Internship() {
             photos={photoIntern}
         >
             <ul className="list-disc list-inside space-y-2 leading-relaxed text-sm sm:text-base text-justify text-white ">
-
                 <li>Developed a web-based management system for daily reporting and employee performance evaluation using Laravel 11, Vue.js, Tailwind CSS and MySQL</li>
                 <li>Designed the application architecture and created system design documentation</li>
                 <li>Tested the application to ensure functionality and quality compliance with requirements</li>
@@ -209,7 +205,6 @@ function AssistantLab() {
                     title="Laboratory Assistant for  Project Management Practicum"
                     period="Oct 2024 – Jan 2025"
                     desc={[
-
                     ]}
                 />
 
@@ -218,7 +213,6 @@ function AssistantLab() {
                     title="Laboratory Assistant for Object-Oriented Programming Practicum"
                     period="Oct 2024 – Jan 2025"
                     desc={[
-
                     ]}
                 />
                 {/* ITEM 6 */}
@@ -226,10 +220,8 @@ function AssistantLab() {
                     title="Laboratory Assistant for Object-Oriented Programming Practicum"
                     period="Oct 2023 – Jan 2024"
                     desc={[
-
                     ]}
                 />
-
             </div>
         </ExperienceCard>
     )
@@ -296,7 +288,7 @@ function ExperienceCard({ title, place, period, children, photos = [] }) {
                     </div>
                 </div>
 
-                {/* RIGHT - SLIDER (NAIK SAMPAI ATAS) */}
+                {/* RIGHT - SLIDER */}
                 <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-gray-700 bg-black">
 
                     {/* BLUR BACKGROUND */}
@@ -330,8 +322,6 @@ function ExperienceCard({ title, place, period, children, photos = [] }) {
                     </button>
 
                 </div>
-
-
             </div>
         </div>
     )
@@ -340,7 +330,6 @@ function ExperienceCard({ title, place, period, children, photos = [] }) {
 function TimelineItem({ title, period, desc }) {
     return (
         <div className="relative">
-
             {/* DOT */}
             <span className="absolute -left-8 top-1 w-3 h-3 rounded-full bg-pink-300" />
 
@@ -353,7 +342,6 @@ function TimelineItem({ title, period, desc }) {
                     <li key={i}>{item}</li>
                 ))}
             </ul>
-
         </div>
     )
 }

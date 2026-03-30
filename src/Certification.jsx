@@ -9,19 +9,18 @@ import certified5 from './assets/images/cer5.png'
 import certified6 from './assets/images/cer6.png'
 import certified7 from './assets/images/cer7.png'
 import certified8 from './assets/images/cer8.png'
+import certified9 from './assets/images/cer9.png'
 
 const certificateImages = [
-    certified8,
-      certified3,
+  certified9,
+  certified8,
+  certified3,
   certified4,
-    certified2,
-
-
-
+  certified2,
   certified5,
   certified6,
   certified7,
-    certified1,
+  certified1,
 
 ]
 
@@ -62,11 +61,10 @@ export default function Certification() {
     >
       {/* Header */}
       <div
-        className={`transition-all duration-1000 ease-out transform ${
-          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-        }`}
+        className={`transition-all duration-1000 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          }`}
       >
-        <h2 className="text-4xl font-bold text-center mb-12 gradient-text">CERTIFICATIONS</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 gradient-text">CERTIFICATIONS</h2>
 
         {/* Grid of Certificates */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"> {/* Size in every monitor */}
@@ -95,7 +93,6 @@ export default function Certification() {
                   <span>Click to view</span>
                 </div>
               </div>
-
             </div>
           ))}
         </div>

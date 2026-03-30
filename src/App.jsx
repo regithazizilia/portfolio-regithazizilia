@@ -26,15 +26,15 @@ function HeroText() {
     }, [])
 
     return (
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-48 sm:py-64 md:py-72 lg:py-80">
             <div className="text-center">
-                <p className="mt-6 text-pretty font-medium gradient-text sm:text-4xl mb-3  ">
+                <p className="mt-4 text-pretty font-medium gradient-text text-lg sm:text-2xl lg:text-4xl mb-3">
                     Hi! I am
                 </p>
-                <h1 className="text-balance  font-semibold tracking-tight text-white text-8xl mb-5">
+                <h1 className="text-balance font-semibold tracking-tight text-white text-4xl sm:text-6xl lg:text-8xl mb-5">
                     Regitha Zizilia
                 </h1>
-                <p className="mt-8 text-pretty text-lg font-medium gradient-text sm:text-2xl">
+                <p className="mt-6 text-pretty text-base sm:text-lg lg:text-2xl font-medium gradient-text">
                     {roles[currentRole]}
                 </p>
             </div>
@@ -75,7 +75,8 @@ export default function Navbar() {
     return (
         <div className="bg-main">
             <header className="fixed inset-x-0 top-0 z-50">
-                <nav aria-label="Global" className="flex items-center justify-center p-6 lg:px-8 gap-x-6">
+                <nav aria-label="Global" className="flex items-center justify-center p-4 sm:p-6 lg:px-8 gap-x-3 sm:gap-x-6">
+                    {/* Desktop Navigation */}
                     <div className="hidden lg:flex gap-x-6">
                         {navigation.map((item) => (
                             <a
@@ -91,12 +92,12 @@ export default function Navbar() {
                         ))}
                     </div>
 
-                    {/* Mobile Menu Button */}
+                    {/* Mobile/Tablet Menu Button */}
                     <div className="flex lg:hidden absolute right-6">
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(true)}
-                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200 hover:text-white transition"
                         >
                             <span className="sr-only">Open main menu</span>
                             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -106,33 +107,27 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-                    <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm">
-                        <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Your Company</span>
-                                <img
-                                    alt=""
-                                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                                    className="h-8 w-auto"
-                                />
-                            </a>
+                    <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-main p-6 sm:max-w-sm">
+                        <div className="flex items-center justify-between mb-6">
+                            <h2 className="text-white font-semibold">Menu</h2>
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="-m-2.5 rounded-md p-2.5 text-gray-200"
+                                className="-m-2.5 rounded-md p-2.5 text-gray-200 hover:text-white transition"
                             >
                                 <span className="sr-only">Close menu</span>
                                 <XMarkIcon aria-hidden="true" className="h-6 w-6" />
                             </button>
                         </div>
-                        <div className="mt-6 space-y-2">
+                        <div className="space-y-2">
                             {navigation.map((item) => (
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className={`block px-3 py-2 rounded-md font-semibold transition ${activeSection === item.href
-                                            ? 'bg-white text-gray-900'
-                                            : 'text-white hover:bg-white hover:text-gray-900'
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`block text-xs sm:text-sm font-semibold px-3 py-2 rounded-md transition ${activeSection === item.href
+                                            ? 'bg-navbar text-red-900'
+                                            : 'text-white hover:bg-pink hover:text-pink-200'
                                         }`}
                                 >
                                     {item.name}

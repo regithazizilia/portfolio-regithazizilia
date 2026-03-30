@@ -31,10 +31,10 @@ export default function Education() {
     const { ref: pdfRef, inView: pdfInView } = useInView({ threshold: 0.2 })
 
     return (
-        <section id="education" className="flex flex-col lg:flex-row items-center px-40 py-24 bg-main text-white lg:justify-between">
-            <div className="overflow-hidden bg-main py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <section id="education" className="flex flex-col lg:flex-row items-center justify-center px-6 sm:px-20 lg:px-40 py-12 sm:py-24 bg-main text-white">
+            <div className="overflow-hidden bg-transparent py-0 sm:py-0 w-full">
+                <div className="mx-auto max-w-7xl px-0 lg:px-0">
+                    <div className="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-12 lg:mx-auto lg:max-w-none lg:grid-cols-2">
 
                         {/* Text & Info */}
                         <div
@@ -43,14 +43,14 @@ export default function Education() {
                                 }`}
                         >
                             <div className="lg:max-w-lg">
-                                <h2 className="text-base/7 font-bold gradient-text">EDUCATION</h2>
-                                <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">
+                                <h2 className="text-xs sm:text-sm font-bold gradient-text">EDUCATION</h2>
+                                <p className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-pretty text-white">
                                     Jenderal Achmad Yani University
                                 </p>
-                                <p className="mt-6 text-lg/8 text-pink-100">
+                                <p className="mt-4 text-base sm:text-lg text-pink-100">
                                     Bachelor of Informatics Engineering | Data and Software Engineering
                                 </p>
-                                <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-400 lg:max-w-none">
+                                <dl className="mt-6 sm:mt-10 max-w-xl space-y-6 sm:space-y-8 text-sm sm:text-base text-gray-400 lg:max-w-none">
                                     {features.map((feature) => (
                                         <div key={feature.name} className="relative pl-9">
                                             <feature.icon aria-hidden="true" className="absolute top-0 left-0 size-5 text-fuchsia-50" />
@@ -60,11 +60,11 @@ export default function Education() {
                                     ))}
                                 </dl>
 
-                                <div className="mt-8 flex gap-4">
-                                    <span className="bg-grid text-white px-4 py-2 rounded-full font-medium text-sm">
+                                <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-2 sm:gap-4">
+                                    <span className="bg-grid text-white px-3 py-2 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm">
                                         Publications Indexed in Sinta 3
                                     </span>
-                                    <span className="bg-grid text-white px-4 py-2 rounded-full font-medium text-sm">
+                                    <span className="bg-grid text-white px-3 py-2 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm">
                                         2025
                                     </span>
                                 </div>
@@ -75,8 +75,8 @@ export default function Education() {
                         <div
                             ref={pdfRef}
                             className={`w-full max-w-2xl mx-auto rounded-xl shadow-2xl overflow-hidden 
-                border-2 border-pink-100 transition-all duration-700
-                ${pdfInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                                        border-2 border-pink-100 transition-all duration-700
+                                        ${pdfInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                         >
                             <iframe
                                 src={Pdf}
@@ -87,9 +87,7 @@ export default function Education() {
                                     borderRadius: '0 0 10px 10px'
                                 }}
                             />
-
                         </div>
-
                     </div>
                 </div>
             </div>

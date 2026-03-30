@@ -7,22 +7,21 @@ export default function Footer() {
         <footer className="bg-main text-white border-t border-gray-800">
             {/* Main Footer */}
             <div className="px-6 sm:px-20 lg:px-40 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
 
                     {/* Brand & Description */}
-                    <div className="space-y-4">
-                        <h3 className="text-2xl font-bold">
+                    <div className="space-y-4 text-center sm:text-left">
+                        <h3 className="text-xl sm:text-2xl font-bold">
                             <span className="gradient-text">Portfolio</span>
                         </h3>
                         <p className="text-white max-w-xs">
                             Passionate about developing innovative software and analyzing data into actionable insights.
                         </p>
-
                     </div>
 
                     {/* Quick Links */}
-                    <div className="space-y-4">
-                        <h4 className="text-lg font-semibold gradient-text">Quick Links</h4>
+                    <div className="space-y-4 text-center sm:text-left">
+                        <h4 className="text-base sm:text-lg font-semibold gradient-text">Quick Links</h4>
                         <ul className="space-y-2 text-white">
                             <li>
                                 <a href="#" className="hover:text-white transition-colors">
@@ -62,13 +61,12 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-800 px-6 sm:px-20 lg:px-40 py-6">
-                <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 text-gray-400 text-sm">
+                <div className="flex flex-col items-center gap-2 sm:gap-4 text-gray-400 text-xs sm:text-sm">
                     {/* Copyright */}
                     <div className="flex items-center gap-1 text-white">
                         <span>© {currentYear} All rights reserved.</span>
@@ -76,7 +74,7 @@ export default function Footer() {
                     </div>
 
                     {/* Separator */}
-                    <span className="hidden md:inline text-white">|</span>
+                    <span className="text-white">|</span>
 
                     {/* Made with */}
                     <div className="flex items-center gap-2 text-white">
