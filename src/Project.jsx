@@ -132,7 +132,7 @@ import doc7 from './assets/modal/doc7.png'
 import doc8 from './assets/modal/doc8.png'
 
 export default function Projects() {
-    const { ref, inView } = useInView({ threshold: 0.2 })
+    const { ref, inView } = useInView({ threshold: 0.05 })
     const [activeProject, setActiveProject] = useState(null)
 
 
@@ -355,7 +355,7 @@ export default function Projects() {
             className="scroll-mt-32 px-6 sm:px-20 lg:px-40 py-24 bg-main text-white"
         >
             <div
-                className={`transition-all duration-1000 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                className={`transition-all duration-1000 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-0'
                     }`}
             >
                 <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 gradient-text">
@@ -367,7 +367,7 @@ export default function Projects() {
                     {projects.map(project => (
                         <div
                             key={project.id}
-                            className="relative cursor-pointer group"
+                            className="relative cursor-pointer group hover:scale-105 transition-transform duration-300"
                             onClick={() => setActiveProject(project)}
                         >
                             {/* BORDER ANIMATION */}
@@ -377,7 +377,7 @@ export default function Projects() {
                             </div>
 
                             {/* CARD */}
-                            <div className="relative bg-grid rounded-2xl overflow-hidden m-0.5">
+                            <div className="relative bg-grid rounded-2xl overflow-hidden m-0.5 shadow-lg">
                                 <img
                                     src={project.thumbnail}
                                     alt={project.name}
@@ -386,7 +386,7 @@ export default function Projects() {
 
 
                                 <div className="p-4">
-                                    <h3 className="text-xl font-semibold mb-3">
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-3">
                                         {project.name}
                                     </h3>
                                     <span className="text-xs bg-grid2 px-3 py-1 rounded-full">

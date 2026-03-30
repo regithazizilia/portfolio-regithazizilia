@@ -75,7 +75,7 @@ export default function Education() {
                         <div
                             ref={pdfRef}
                             className={`w-full max-w-2xl mx-auto rounded-xl shadow-2xl overflow-hidden 
-                                        border-2 border-pink-100 transition-all duration-700
+                                        border-2 border-pink-100 transition-all duration-700 h-80 sm:h-96 lg:h-full
                                         ${pdfInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                         >
                             <iframe
