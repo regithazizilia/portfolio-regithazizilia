@@ -10,8 +10,12 @@ import certified6 from './assets/images/cer6.png'
 import certified7 from './assets/images/cer7.png'
 import certified8 from './assets/images/cer8.png'
 import certified9 from './assets/images/cer9.png'
+import certified10 from './assets/images/cer10.png'
+import certified11 from './assets/images/cer11.png'
 
 const certificateImages = [
+  certified10,
+  certified11,
   certified9,
   certified8,
   certified3,
